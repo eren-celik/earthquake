@@ -1,0 +1,323 @@
+{
+  "externalProjects" : [
+    "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire",
+    {
+      "sourceRootPath" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire",
+      "options" : [
+
+      ],
+      "additionalFiles" : [
+
+      ],
+      "targets" : [
+        {
+          "scripts" : [
+
+          ],
+          "deploymentTarget" : {
+            "kind" : "iOS",
+            "version" : "10.0",
+            "deploymentDevices" : 3
+          },
+          "prune" : false,
+          "bundleId" : "Alamofire",
+          "copyFiles" : [
+
+          ],
+          "launchArguments" : [
+
+          ],
+          "dependencies" : [
+            {
+              "kind" : "sdk",
+              "name" : "CFNetwork.framework",
+              "status" : "required"
+            }
+          ],
+          "additionalFiles" : [
+
+          ],
+          "name" : "Alamofire",
+          "settings" : {
+            "base" : {
+              "SWIFT_ACTIVE_COMPILATION_CONDITIONS" : {
+                "kind" : "array",
+                "array" : [
+                  "$(inherited)",
+                  "SWIFT_PACKAGE"
+                ]
+              },
+              "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" : {
+                "kind" : "string",
+                "string" : "NO"
+              },
+              "GCC_PREPROCESSOR_DEFINITIONS" : {
+                "kind" : "array",
+                "array" : [
+                  "$(inherited)",
+                  "SWIFT_PACKAGE=1"
+                ]
+              },
+              "GCC_WARN_INHIBIT_ALL_WARNINGS" : {
+                "kind" : "string",
+                "string" : "YES"
+              },
+              "FRAMEWORK_SEARCH_PATHS" : {
+                "kind" : "array",
+                "array" : [
+                  "$(inherited)",
+                  "$(PLATFORM_DIR)\/Developer\/Library\/Frameworks"
+                ]
+              },
+              "GCC_NO_COMMON_BLOCKS" : {
+                "kind" : "string",
+                "string" : "NO"
+              },
+              "USE_HEADERMAP" : {
+                "kind" : "string",
+                "string" : "NO"
+              },
+              "ENABLE_STRICT_OBJC_MSGSEND" : {
+                "kind" : "string",
+                "string" : "NO"
+              },
+              "SWIFT_SUPPRESS_WARNINGS" : {
+                "kind" : "string",
+                "string" : "YES"
+              },
+              "CLANG_ENABLE_OBJC_WEAK" : {
+                "kind" : "string",
+                "string" : "NO"
+              },
+              "ALWAYS_SEARCH_USER_PATHS" : {
+                "kind" : "string",
+                "string" : "YES"
+              }
+            },
+            "configurations" : [
+              {
+                "name" : "Release",
+                "variant" : "release"
+              },
+              {
+                "settings" : {
+
+                }
+              },
+              {
+                "name" : "Debug",
+                "variant" : "debug"
+              },
+              {
+                "settings" : {
+
+                }
+              }
+            ],
+            "defaultSettings" : {
+              "kind" : "recommended",
+              "excluding" : [
+
+              ]
+            }
+          },
+          "coreDataModels" : [
+
+          ],
+          "platform" : "ios",
+          "environment" : {
+
+          },
+          "sources" : [
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/HTTPHeaders.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/URLEncodedFormEncoder.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/OperationQueue+Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/DispatchQueue+Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/ResponseSerialization.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/StringEncoding+Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/HTTPMethod.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/URLConvertible+URLRequestConvertible.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Notifications.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Combine.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/EventMonitor.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/URLSessionConfiguration+Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/CachedResponseHandler.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/MultipartFormData.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/RequestTaskMap.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Response.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/AFError.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Validation.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/URLRequest+Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/SessionDelegate.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/AlamofireExtended.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/ParameterEncoder.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Protected.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/RequestInterceptor.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/MultipartUpload.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/AuthenticationInterceptor.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/ServerTrustEvaluation.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/RetryPolicy.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/RedirectHandler.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/NetworkReachabilityManager.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Request.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Session.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/Result+Alamofire.swift"
+            },
+            {
+              "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Source\/ParameterEncoding.swift"
+            }
+          ],
+          "resources" : [
+
+          ],
+          "product" : "staticFramework",
+          "playgrounds" : [
+
+          ],
+          "productName" : "Alamofire",
+          "filesGroup" : {
+            "kind" : "group",
+            "name" : "Project"
+          },
+          "rawScriptBuildPhases" : [
+
+          ],
+          "infoPlist" : {
+            "kind" : "extendingDefault",
+            "dictionary" : {
+
+            }
+          }
+        }
+      ],
+      "settings" : {
+        "base" : {
+          "SWIFT_VERSION" : {
+            "kind" : "string",
+            "string" : "5.0.0"
+          }
+        },
+        "configurations" : [
+          {
+            "name" : "Debug",
+            "variant" : "debug"
+          },
+          {
+            "settings" : {
+
+            }
+          },
+          {
+            "name" : "Release",
+            "variant" : "release"
+          },
+          {
+            "settings" : {
+
+            }
+          }
+        ],
+        "defaultSettings" : {
+          "kind" : "recommended",
+          "excluding" : [
+
+          ]
+        }
+      },
+      "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire",
+      "filesGroup" : {
+        "kind" : "group",
+        "name" : "Project"
+      },
+      "packages" : [
+
+      ],
+      "xcodeProjPath" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire\/Alamofire.xcodeproj",
+      "resourceSynthesizers" : [
+
+      ],
+      "lastUpgradeCheck" : "99.9.9",
+      "schemes" : [
+
+      ],
+      "name" : "Alamofire"
+    }
+  ],
+  "externalDependencies" : {
+    "Alamofire" : [
+      {
+        "kind" : "project",
+        "target" : "Alamofire",
+        "path" : "\/Users\/erencelik\/Desktop\/MyApp\/Tuist\/Dependencies\/SwiftPackageManager\/.build\/checkouts\/Alamofire"
+      }
+    ]
+  }
+}

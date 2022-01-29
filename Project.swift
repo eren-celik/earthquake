@@ -1,10 +1,18 @@
+//
+//  Project.swift
+//
+//  Created by Eren  Çelik on 29.01.2022.
+//
+
+
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let target = Target(
     name: "earthquake",
     platform: .iOS,
     product: .app,
-    bundleId: "com.erencelik.earthquake",
+    bundleId: "ios.erencelik.earthquake",
     
     infoPlist: .extendingDefault(with: [
         "CFBundleShortVersionString": "1.0",
@@ -18,7 +26,7 @@ let target = Target(
         "Resources/LaunchScreen.storyboard"
     ],
     dependencies: [
-        .external(name: "Alamofire"),
+        networkModule,
     ]
 )
 

@@ -13,4 +13,9 @@ public extension Package {
         .remote(url: "https://github.com/Alamofire/Alamofire",
                 requirement: .upToNextMajor(from: "5.0.0"))
     }
+    
+    static var moya: Self {
+        .remote(url: "https://github.com/Moya/Moya",
+                requirement: .upToNextMajor(from: "15.0.0"))
+    }
 }

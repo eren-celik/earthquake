@@ -10,7 +10,9 @@ import ProjectDescriptionHelpers
 
 let project = Project.module(name: "NetworkModule",
                              dependencies: [
-                                alamofire
+                                alamofire,
+                                moya
                              ],packages: [
-                                .alamofire
+                                .alamofire,
+                                .moya
                              ])

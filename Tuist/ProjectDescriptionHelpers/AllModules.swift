@@ -11,6 +11,7 @@ import ProjectDescription
 //MARK: - SPM Packages
 
 public let alamofire = TargetDependency.package(product: "Alamofire")
+public let moya = TargetDependency.package(product: "Moya")
 
 //MARK: - Targets
 

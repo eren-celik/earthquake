@@ -21,7 +21,7 @@ public extension Project {
                              deploymentTarget: .iOS(targetVersion: "13.0", devices: .iphone),
                              infoPlist: .default,
                              sources: "Sources/**",
-                             resources: hasResources ? "Sources/**": nil,
+                             resources: hasResources ? "Resources/**": nil,
                              dependencies: dependencies)
         
         return Project(name: name,

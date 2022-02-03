@@ -7,6 +7,7 @@
 
 import UIKit
 import NetworkModule
+import JGProgressHUD
 
 final class HomeViewController: UIViewController {
     
@@ -17,15 +18,18 @@ final class HomeViewController: UIViewController {
     //MARK: View Properties
     let tableView: UITableView = {
         let view = UITableView(frame: UIScreen.main.bounds)
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.register(UITableViewCell.self,
                       forCellReuseIdentifier: "QuakeCell")
         return view
     }()
     
+    var datePicker: UIDatePicker?
+    let hud = JGProgressHUD()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.load()
+        presenter.load(date: Date().formatDate(),
+                       limit: nil)
         setupView()
     }
 }

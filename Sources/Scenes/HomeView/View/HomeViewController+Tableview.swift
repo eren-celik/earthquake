@@ -22,7 +22,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuakeCell", for: indexPath)
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "QuakeCell")
         let quake = quakes[indexPath.row]
         cell.textLabel?.text = quake.title
         cell.detailTextLabel?.text = quake.date

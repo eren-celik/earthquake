@@ -14,9 +14,13 @@ final class HomeViewRouter: HomeViewRouterProtocol {
     init(view: UIViewController) {
         self.view = view
     }
+    
     func navigate(to route: HomeViewRoute) {
         switch route {
         case .detail(_):
+            let vc = UIViewController()
+            vc.view.backgroundColor = .red
+            view.show(vc, sender: nil)
             break
         }
     }

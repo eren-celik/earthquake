@@ -23,9 +23,9 @@ final class HomeViewPresenter: HomeViewPresenterProtocol {
         self.interactor.delegate = self
     }
     
-    func load() {
+    func load(date: String?, limit: Int?) {
         view.handleOutput(.updateTitle("Quakes"))
-        interactor.load()
+        interactor.load(date: date, limit: limit)
     }
     
     func selectQuake(at index: Int) {

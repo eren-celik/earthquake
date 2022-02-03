@@ -13,8 +13,8 @@ extension HomeViewController: HomeViewProtocol {
         switch output {
         case .updateTitle(let title):
             self.title = title
-        case .setLoading(_):
-            break
+        case .setLoading(let status):
+            status ? hud.show(in: self.view) : hud.dismiss()
         case .showQuakes(let quake):
             self.quakes = quake
             self.tableView.reloadData()

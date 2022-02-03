@@ -18,18 +18,17 @@ final class HomeViewInteractor: HomeViewInteractorProtocol {
         self.manager = manager
     }
     
-    func load() {
+    func load(date: String?, limit: Int?) {
         delegate?.handleOutput(.setLoading(true))
-        manager.getEartquakes(limit: 20, date: "2022-01-31") { [weak self] (result) in
+        defer { self.delegate?.handleOutput(.setLoading(false)) }
+        manager.getEartquakes(limit: limit ?? 20, date: date ?? "2022-01-31") { [weak self] (result) in
             switch result {
             case .success(let data):
                 if let result = data.result {
                     self?.quakes = result
                     self?.delegate?.handleOutput(.showQuakes(result))
-                    self?.delegate?.handleOutput(.setLoading(false))
                 }
             case .failure(let error):
-                self?.delegate?.handleOutput(.setLoading(false))
                 print("DEBUG: interactor error", error.localizedDescription)
             }
         }

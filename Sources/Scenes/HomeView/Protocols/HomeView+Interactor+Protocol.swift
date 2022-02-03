@@ -10,7 +10,7 @@ import struct NetworkModule.Response
 
 protocol HomeViewInteractorProtocol: class {
     var delegate: HomeViewInteractorDelegate? { get set }
-    func load()
+    func load(date: String?, limit: Int?)
     func selectQuakes(at index: Int)
 }
 

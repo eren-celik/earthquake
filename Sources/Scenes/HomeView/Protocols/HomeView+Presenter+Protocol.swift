@@ -9,7 +9,7 @@ import Foundation
 import struct NetworkModule.Response
 
 protocol HomeViewPresenterProtocol: class {
-    func load()
+    func load(date: String?, limit: Int?)
     func selectQuake(at index: Int)
 }
 

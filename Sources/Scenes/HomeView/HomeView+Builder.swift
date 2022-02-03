@@ -13,7 +13,9 @@ final class HomeViewBuilder {
         let view = HomeViewController()
         let router = HomeViewRouter(view: view)
         let interactor = HomeViewInteractor(manager: app.network)
-        let presenter = HomeViewPresenter(view: view, interactor: interactor, router: router)
+        let presenter = HomeViewPresenter(view: view,
+                                          interactor: interactor,
+                                          router: router)
         view.presenter = presenter
         return view
     }

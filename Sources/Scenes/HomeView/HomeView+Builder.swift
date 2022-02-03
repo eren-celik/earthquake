@@ -15,7 +15,6 @@ final class HomeViewBuilder {
         let interactor = HomeViewInteractor(manager: app.network)
         let presenter = HomeViewPresenter(view: view, interactor: interactor, router: router)
         view.presenter = presenter
-        view.configureUI()
         return view
     }
 }

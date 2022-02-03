@@ -23,7 +23,9 @@ let target = Target(
     sources: "Sources/**",
     resources: [
         "Resources/*.xcassets",
-        "Resources/LaunchScreen.storyboard"
+        "Resources/LaunchScreen.storyboard",
+        "Resources/**",
+        "Resources/Scenes/UI/**"
     ],
     dependencies: [
         networkModule,

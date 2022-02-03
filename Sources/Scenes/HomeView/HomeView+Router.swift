@@ -18,9 +18,8 @@ final class HomeViewRouter: HomeViewRouterProtocol {
     func navigate(to route: HomeViewRoute) {
         switch route {
         case .detail(_):
-            let vc = UIViewController()
-            vc.view.backgroundColor = .red
-            view.show(vc, sender: nil)
+            let detailView = DetailViewBuilder.make()
+            view.present(detailView, animated: true, completion: nil)
             break
         }
     }

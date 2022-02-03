@@ -12,6 +12,7 @@ import ProjectDescription
 
 public let alamofire = TargetDependency.package(product: "Alamofire")
 public let moya = TargetDependency.package(product: "Moya")
+public let progressHUD = TargetDependency.package(product: "JGProgressHUD")
 
 //MARK: - Targets
 

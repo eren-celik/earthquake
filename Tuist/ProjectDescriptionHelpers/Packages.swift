@@ -18,4 +18,9 @@ public extension Package {
         .remote(url: "https://github.com/Moya/Moya",
                 requirement: .upToNextMajor(from: "15.0.0"))
     }
+    
+    static var progressHUD: Self {
+        .remote(url: "https://github.com/JonasGessner/JGProgressHUD",
+                requirement: .upToNextMajor(from: "2.0.0"))
+    }
 }

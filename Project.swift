@@ -26,13 +26,16 @@ let target = Target(
         "Resources/LaunchScreen.storyboard"
     ],
     dependencies: [
-        networkModule
+        networkModule,
+        progressHUD
     ]
 )
 
 let project = Project(
     name: "earthquake",
-    targets: [
+    packages: [
+        .progressHUD
+    ], targets: [
         target
     ]
 )

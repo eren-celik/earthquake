@@ -18,6 +18,7 @@ enum HomeViewInteractorOutput {
     case setLoading(Bool)
     case showQuakes([Response])
     case showQuakeDetail(Response)
+    case showError(String)
 }
 
 protocol HomeViewInteractorDelegate: class {

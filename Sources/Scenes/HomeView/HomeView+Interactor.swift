@@ -25,11 +25,14 @@ final class HomeViewInteractor: HomeViewInteractorProtocol {
             switch result {
             case .success(let data):
                 if let result = data.result {
+                    if result.isEmpty {
+                        self?.delegate?.handleOutput(.showError("No Data"))
+                    }
                     self?.quakes = result
                     self?.delegate?.handleOutput(.showQuakes(result))
                 }
             case .failure(let error):
-                print("DEBUG: interactor error", error.localizedDescription)
+                self?.delegate?.handleOutput(.showError(error.localizedDescription))
             }
         }
     }

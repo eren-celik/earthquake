@@ -43,6 +43,8 @@ extension HomeViewPresenter: HomeViewInteractorDelegate {
             view.handleOutput(.showQuakes(quakes))
         case .showQuakeDetail(let quake):
             router.navigate(to: .detail(quake))
+        case .showError(let message):
+            router.showAlert(with: message)
         }
     }
 }

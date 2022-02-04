@@ -14,4 +14,5 @@ enum HomeViewRoute {
 
 protocol HomeViewRouterProtocol: class {
     func navigate(to route: HomeViewRoute)
+    func showAlert(with message: String)
 }

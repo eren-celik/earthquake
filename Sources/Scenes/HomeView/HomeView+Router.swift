@@ -10,6 +10,7 @@ import UIKit
 final class HomeViewRouter: HomeViewRouterProtocol {
     
     unowned let view: UIViewController
+    weak var navigationController: UINavigationController?
     
     init(view: UIViewController) {
         self.view = view
@@ -17,10 +18,16 @@ final class HomeViewRouter: HomeViewRouterProtocol {
     
     func navigate(to route: HomeViewRoute) {
         switch route {
-        case .detail(_):
-            let detailView = DetailViewBuilder.make()
-            view.present(detailView, animated: true, completion: nil)
+        case let .detail(response):
+            let detailView = DetailViewBuilder.make(response)
+            view.navigationController?.pushViewController(detailView, animated: true)
             break
         }
+    }
+    
+    func showAlert(with message: String) {
+        let alerController = UIAlertController(title: "Error an occured", message: message, preferredStyle: .alert)
+        alerController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.view.present(alerController, animated: true, completion: nil)
     }
 }

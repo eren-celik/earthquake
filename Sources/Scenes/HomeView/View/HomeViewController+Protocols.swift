@@ -17,7 +17,7 @@ extension HomeViewController: HomeViewProtocol {
             status ? hud.show(in: self.view) : hud.dismiss()
         case .showQuakes(let quake):
             self.quakes = quake
-            self.tableView.reloadData()
+        break
         }
     }
 }

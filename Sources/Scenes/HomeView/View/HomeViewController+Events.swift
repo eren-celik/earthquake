@@ -35,7 +35,7 @@ extension HomeViewController {
     }
     
     @objc
-    func dueDateChanged(sender: UIDatePicker) {
+    private func dueDateChanged(sender: UIDatePicker) {
         presenter.load(date: sender.date.formatDate(), limit: 10)
     }
 }

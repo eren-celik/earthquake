@@ -13,7 +13,11 @@ final class HomeViewController: UIViewController {
     
     //MARK: Properties
     var presenter: HomeViewPresenterProtocol!
-    var quakes: [Response] = []
+    var quakes: [Response] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     //MARK: View Properties
     let tableView: UITableView = {

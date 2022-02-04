@@ -8,6 +8,8 @@
 import Foundation
 import struct NetworkModule.Response
 
+//Presenter -> Interactors
+
 protocol HomeViewInteractorProtocol: class {
     var delegate: HomeViewInteractorDelegate? { get set }
     func load(date: String?, limit: Int?)
@@ -18,6 +20,7 @@ enum HomeViewInteractorOutput {
     case setLoading(Bool)
     case showQuakes([Response])
     case showQuakeDetail(Response)
+    case showError(String)
 }
 
 protocol HomeViewInteractorDelegate: class {

@@ -10,10 +10,10 @@ import UIKit
 final class HomeViewBuilder {
     
     static func make() -> HomeViewController {
-        let view = HomeViewController()
-        let router = HomeViewRouter(view: view)
-        let interactor = HomeViewInteractor(manager: app.network)
-        let presenter = HomeViewPresenter(view: view,
+        let view: HomeViewController = HomeViewController()
+        let router: HomeViewRouter = HomeViewRouter(view: view)
+        let interactor: HomeViewInteractor = HomeViewInteractor(manager: app.network)
+        let presenter: HomeViewPresenter = HomeViewPresenter(view: view,
                                           interactor: interactor,
                                           router: router)
         view.presenter = presenter

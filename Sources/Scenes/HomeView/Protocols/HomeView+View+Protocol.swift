@@ -7,6 +7,7 @@
 
 import UIKit
 
+//Presenter -> View
 protocol HomeViewProtocol: class {
     func handleOutput(_ output: HomeViewPresenterOutput)
 }

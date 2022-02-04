@@ -8,6 +8,8 @@
 import Foundation
 import struct NetworkModule.Response
 
+//Presenter -> Interactors
+
 protocol HomeViewInteractorProtocol: class {
     var delegate: HomeViewInteractorDelegate? { get set }
     func load(date: String?, limit: Int?)

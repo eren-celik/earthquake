@@ -8,6 +8,8 @@
 import Foundation
 import struct NetworkModule.Response
 
+//Presenter -> Router
+
 enum HomeViewRoute {
     case detail(Response)
 }

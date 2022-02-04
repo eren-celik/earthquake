@@ -10,7 +10,6 @@ import UIKit
 final class HomeViewRouter: HomeViewRouterProtocol {
     
     unowned let view: UIViewController
-    weak var navigationController: UINavigationController?
     
     init(view: UIViewController) {
         self.view = view
@@ -19,7 +18,7 @@ final class HomeViewRouter: HomeViewRouterProtocol {
     func navigate(to route: HomeViewRoute) {
         switch route {
         case let .detail(response):
-            let detailView = DetailViewBuilder.make(response)
+            let detailView = DetailViewBuilder.make(with: response)
             view.navigationController?.pushViewController(detailView, animated: true)
             break
         }

@@ -11,7 +11,7 @@ import NetworkModule
 final class HomeViewInteractor: HomeViewInteractorProtocol {
     
     weak var delegate: HomeViewInteractorDelegate?
-    private let manager: NetworkManager
+    private unowned let manager: NetworkManager
     private var quakes: [Response] = []
     
     init(manager: NetworkManager) {

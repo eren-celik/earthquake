@@ -34,4 +34,16 @@ extension HomeViewController {
         )
         self.navigationItem.rightBarButtonItem = dateButton
     }
+
+    internal func setCellbackground(value: Int) -> UIColor {
+        switch value {
+        case 1...4:
+            return .green
+        case 5...7:
+            return .yellow
+        case 7..<9:
+            return .red
+        default: return .clear
+        }
+    }
 }

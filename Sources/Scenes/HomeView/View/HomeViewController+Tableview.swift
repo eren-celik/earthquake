@@ -24,6 +24,7 @@ extension HomeViewController: UITableViewDataSource {
         let quake = quakes[indexPath.row]
         cell.textLabel?.text = quake.title
         cell.detailTextLabel?.text = quake.date
+        cell.backgroundColor = setCellbackground(value: Int(quake.mag ?? 0))
         return cell
     }
 }

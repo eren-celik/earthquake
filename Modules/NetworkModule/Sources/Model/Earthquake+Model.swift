@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// swiftlint:disable redundant_string_enum_value type_name
 // MARK: - EarthquakeModel
 public struct EarthquakeModel: Decodable {
     public let status: Bool?
@@ -61,19 +61,22 @@ public struct Response: Codable {
         case hash2 = "hash2"
     }
 
-    public init(id: ID?,
-                mag: Double?,
-                lng: Double?,
-                lat: Double?,
-                lokasyon: String?,
-                depth: Double?,
-                coordinates: [Double]?,
-                title: String?,
-                rev: String?,
-                timestamp: Int?, dateStamp: String?,
-                date: String?,
-                hash: String?,
-                hash2: String?) {
+    public init(
+        id: ID?,
+        mag: Double?,
+        lng: Double?,
+        lat: Double?,
+        lokasyon: String?,
+        depth: Double?,
+        coordinates: [Double]?,
+        title: String?,
+        rev: String?,
+        timestamp: Int?,
+        dateStamp: String?,
+        date: String?,
+        hash: String?,
+        hash2: String?
+    ) {
         self.id = id
         self.mag = mag
         self.lng = lng

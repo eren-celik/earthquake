@@ -8,6 +8,12 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
+let targetActions = [
+    TargetScript.pre(path: "Scripts/SwiftLintRunScript.sh",
+                     arguments: [],
+                     name: "SwiftLint")
+]
+
 let target = Target(
     name: "earthquake",
     platform: .iOS,
@@ -27,6 +33,7 @@ let target = Target(
         "Resources/**",
         "Resources/Scenes/UI/**"
     ],
+    scripts: targetActions,
     dependencies: [
         networkModule,
         progressHUD

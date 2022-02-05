@@ -7,30 +7,31 @@
 
 import Foundation
 
+// swiftlint:disable force_unwrapping
+
 public struct NetworkConstants {
-    
-    static let baseURL: URL = URL(string: "https://api.orhanaydogdu.com.tr/")!
-    
+    static let baseURL = URL(string: "https://api.orhanaydogdu.com.tr/")!
+
     enum HttpHeaderField: String {
         case authentication = "Authorization"
         case contentType = "Content-Type"
         case acceptType = "Accept"
         case acceptEncoding = "Accept-Encoding"
     }
-    
+
     enum ContentType: String {
         case json = "application/json"
     }
-    
-    enum NetworkError : Error {
+
+    enum NetworkError: Error {
         case invalidResponse
         case decodingError
         case responseError
         case urlError
         case unknown
-        
-        var localizedDescription: String{
-            switch self{
+
+        var localizedDescription: String {
+            switch self {
             case .invalidResponse:
                 return "Invalid Response"
             case .decodingError:

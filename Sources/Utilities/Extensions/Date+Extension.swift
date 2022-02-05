@@ -8,7 +8,6 @@
 import UIKit
 
 extension Date {
-    
     func formatDate(_ format: String? = "yyyy-MM-dd") -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format

@@ -8,7 +8,6 @@
 import UIKit
 
 extension HomeViewController: HomeViewProtocol {
-    
     func handleOutput(_ output: HomeViewPresenterOutput) {
         switch output {
         case .updateTitle(let title):
@@ -17,8 +16,6 @@ extension HomeViewController: HomeViewProtocol {
             status ? hud.show(in: self.view) : hud.dismiss()
         case .showQuakes(let quake):
             self.quakes = quake
-        break
         }
     }
 }
-

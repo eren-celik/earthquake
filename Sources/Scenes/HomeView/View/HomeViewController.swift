@@ -8,32 +8,32 @@
 import UIKit
 import NetworkModule
 import JGProgressHUD
-
+// swiftlint:disable implicitly_unwrapped_optional
 final class HomeViewController: UIViewController {
-    
-    //MARK: Properties
+    // MARK: Properties
+    var datePicker: UIDatePicker?
+    let hud = JGProgressHUD()
     var presenter: HomeViewPresenterProtocol!
     var quakes: [Response] = [] {
         didSet {
             tableView.reloadData()
         }
     }
-    
-    //MARK: View Properties
+
     let tableView: UITableView = {
         let view = UITableView(frame: UIScreen.main.bounds)
-        view.register(UITableViewCell.self,
-                      forCellReuseIdentifier: "QuakeCell")
+        view.register(
+            UITableViewCell.self,
+            forCellReuseIdentifier: "QuakeCell"
+        )
         return view
     }()
-    
-    var datePicker: UIDatePicker?
-    let hud = JGProgressHUD()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.load(date: Date().formatDate(),
-                       limit: nil)
+        presenter.load(
+            date: Date().formatDate(),
+            limit: nil)
         setupView()
     }
 }

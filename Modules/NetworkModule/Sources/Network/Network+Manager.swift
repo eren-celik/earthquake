@@ -9,20 +9,18 @@ import Foundation
 import Moya
 
 public final class NetworkManager: NetworkLayerProtocol {
-    
     internal var provider = MoyaProvider<AppAPI>()
-    
+
     public init() {}
-    
-    public func getEartquakes(limit: Int, date: String?, completion: @escaping (Swift.Result<EarthquakeModel, Error>) -> ()) {
+
+    public func getEartquakes(limit: Int, date: String?, completion: @escaping (Swift.Result<EarthquakeModel, Error>) -> Void) {
         request(target: .quakesWithLimit(date: date ?? "", limit: limit), completion: completion)
     }
 }
 
-//MARK: NetworkRequestProtocol
+// MARK: NetworkRequestProtocol
 extension NetworkManager: NetworkRequestProtocol {
-    
-    internal func request<T: Decodable>(target: AppAPI, completion: @escaping (Swift.Result<T, Error>) -> ()) {
+    internal func request<T: Decodable>(target: AppAPI, completion: @escaping (Swift.Result<T, Error>) -> Void) {
         provider.request(target) { result in
             switch result {
             case .success(let response):
@@ -33,22 +31,23 @@ extension NetworkManager: NetworkRequestProtocol {
                     } catch let error {
                         completion(.failure(error))
                     }
-                }else {
-                    let error = NSError(domain:"io.erencelik.networkManager", code:0, userInfo:[NSLocalizedDescriptionKey: "Network Error"])
+                } else {
+                    let error = NSError(
+                        domain: "io.erencelik.networkManager",
+                        code: 0,
+                        userInfo: [NSLocalizedDescriptionKey: "Network Error"]
+                    )
                     completion(.failure(error))
                 }
-                
             case .failure(let error):
                 completion(.failure(error))
             }
         }
-        
     }
 }
 
-//MARK: Helper Functions
+// MARK: Helper Functions
 extension NetworkManager {
-    
     private func getTodayDate() -> String {
         let todayDate = Date()
         let formatter = DateFormatter()

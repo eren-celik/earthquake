@@ -8,7 +8,7 @@
 import Foundation
 import struct NetworkModule.Response
 
-//Presenter -> Interactors
+// Presenter -> Interactors
 
 protocol HomeViewInteractorProtocol: class {
     var delegate: HomeViewInteractorDelegate? { get set }

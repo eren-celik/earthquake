@@ -8,13 +8,12 @@
 import UIKit
 
 final class AppRouter {
-    
     let window: UIWindow
-    
+
     init() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
     }
-    
+
     func start() {
         let viewController = HomeViewBuilder.make()
         let navigationController = UINavigationController(rootViewController: viewController)

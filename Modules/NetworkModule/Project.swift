@@ -12,7 +12,7 @@ let project = Project.module(name: "NetworkModule",
                              dependencies: [
                                 alamofire,
                                 moya
-                             ],packages: [
+                             ], packages: [
                                 .alamofire,
                                 .moya
                              ])

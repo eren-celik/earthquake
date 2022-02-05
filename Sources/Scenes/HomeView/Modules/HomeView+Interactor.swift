@@ -10,7 +10,7 @@ import NetworkModule
 
 final class HomeViewInteractor: HomeViewInteractorProtocol {
     weak var delegate: HomeViewInteractorDelegate?
-    private unowned let manager: NetworkManager
+    private weak var manager: NetworkManager?
     private var quakes: [Response] = []
 
     init(manager: NetworkManager) {
@@ -20,7 +20,7 @@ final class HomeViewInteractor: HomeViewInteractorProtocol {
     func load(date: String?, limit: Int?) {
         delegate?.handleOutput(.setLoading(true))
         defer { self.delegate?.handleOutput(.setLoading(false)) }
-        manager.getEartquakes(limit: limit ?? 20, date: date ?? "2022-01-31") { [weak self] result in
+        manager?.getEartquakes(limit: limit ?? 20, date: date ?? "2022-01-31") { [weak self] result in
             switch result {
             case .success(let data):
                 if let result = data.result {
